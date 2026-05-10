@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Coptic Orthodox Bible Study Resources — In-depth studies of Micah, Romans, and the Acts of the Apostles with patristic commentary.">
+  <title>Coptic Orthodox Bible Study Resources</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --bg: #0d0d2b;
+      --surface: #141435;
+      --gold: #d4a853;
+      --gold-dim: #b8923f;
+      --text: #e0ddd5;
+      --text-dim: #9994a1;
+    }
+    body {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      background-image:
+        radial-gradient(ellipse at 20% 50%, rgba(212,168,83,0.05) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 50%, rgba(100,80,160,0.05) 0%, transparent 60%);
+    }
+    .container {
+      max-width: 900px;
+      width: 100%;
+      text-align: center;
+    }
+    .cross {
+      font-size: 2.5rem;
+      color: var(--gold);
+      margin-bottom: 1rem;
+      opacity: 0.8;
+    }
+    .subtitle {
+      font-family: 'Cinzel', serif;
+      font-size: 0.75rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.8rem;
+    }
+    h1 {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+    h1 span { color: var(--gold); }
+    .desc {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: var(--text-dim);
+      max-width: 600px;
+      margin: 0 auto 3rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid rgba(212,168,83,0.15);
+      border-radius: 12px;
+      padding: 2rem 1.5rem;
+      text-decoration: none;
+      color: var(--text);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .card:hover {
+      border-color: rgba(212,168,83,0.4);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+    }
+    .card:hover::before { opacity: 1; }
+    .card-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      display: block;
+    }
+    .card-book {
+      font-family: 'Cinzel', serif;
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.5rem;
+    }
+    .card h2 {
+      font-family: 'Cinzel', serif;
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 0.8rem;
+    }
+    .card p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: var(--text-dim);
+    }
+    .card-arrow {
+      display: inline-block;
+      margin-top: 1.2rem;
+      color: var(--gold);
+      font-family: 'Cinzel', serif;
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      transition: transform 0.3s ease;
+    }
+    .card:hover .card-arrow { transform: translateX(6px); }
+    footer {
+      margin-top: 2rem;
+      text-align: center;
+      color: var(--text-dim);
+      font-size: 0.8rem;
+      opacity: 0.5;
+    }
+    @media (max-width: 600px) {
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="cross">☦</div>
+    <p class="subtitle">A Coptic Orthodox Study</p>
+    <h1>Bible Study <span>Resources</span></h1>
+    <p class="desc">In-depth studies of the Holy Scriptures — explored through the lens of the Church Fathers and the Coptic Orthodox Tradition.</p>
+
+    <div class="grid">
+      <a href="micah/" class="card">
+        <span class="card-icon">📖</span>
+        <p class="card-book">Old Testament — Minor Prophets</p>
+        <h2>The Book of Micah</h2>
+        <p>Justice, mercy, and the Messianic prophecies — "He has shown you, O man, what is good; and what does the Lord require of you?"</p>
+        <span class="card-arrow">Study Micah →</span>
+      </a>
+      <a href="romans/" class="card">
+        <span class="card-icon">✉️</span>
+        <p class="card-book">New Testament — Pauline Epistle</p>
+        <h2>The Epistle to the Romans</h2>
+        <p>Justification by faith, the depth of God's wisdom, and the life of the Spirit — Paul's theological masterpiece.</p>
+        <span class="card-arrow">Study Romans →</span>
+      </a>
+      <a href="acts/" class="card">
+        <span class="card-icon">🔥</span>
+        <p class="card-book">New Testament — History</p>
+        <h2>The Acts of the Apostles</h2>
+        <p>The birth of the Church at Pentecost, the witness of the Apostles, and the spread of the Gospel from Jerusalem to Rome.</p>
+        <span class="card-arrow">Study Acts →</span>
+      </a>
+    </div>
+
+    <footer>
+      <p>Glory to God forever. Amen.</p>
+    </footer>
+  </div>
+</body>
+</html>
